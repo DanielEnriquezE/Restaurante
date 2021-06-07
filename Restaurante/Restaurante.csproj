@@ -105,8 +105,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CapaPresentacion\About.aspx" />
-    <Content Include="CapaPresentacion\Contact.aspx" />
+    <Content Include="CapaPresentacion\Cliente.aspx" />
+    <Content Include="CapaPresentacion\Admin.aspx" />
     <Content Include="CapaPresentacion\CSS\Estilos.css" />
     <Content Include="CapaPresentacion\JS\js.js" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -114,7 +114,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="CapaPresentacion\Default.aspx" />
+    <Content Include="CapaPresentacion\Index.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -162,31 +162,31 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="CapaPresentacion\About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
+    <Compile Include="CapaPresentacion\Cliente.aspx.cs">
+      <DependentUpon>Cliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CapaPresentacion\About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
+    <Compile Include="CapaPresentacion\Cliente.aspx.designer.cs">
+      <DependentUpon>Cliente.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="CapaAccesoDatos\ConexionAdminEmpresa.cs" />
     <Compile Include="CapaAccesoDatos\ConexionBD.cs" />
     <Compile Include="CapaAccesoDatos\ConexionCliente.cs" />
     <Compile Include="CapaLogicaNegocio\Cliente.cs" />
-    <Compile Include="CapaPresentacion\Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
+    <Compile Include="CapaPresentacion\Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CapaPresentacion\Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
+    <Compile Include="CapaPresentacion\Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CapaPresentacion\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="CapaPresentacion\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CapaPresentacion\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="CapaPresentacion\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
