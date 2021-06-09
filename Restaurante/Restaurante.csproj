@@ -105,7 +105,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CapaPresentacion\Cliente.aspx" />
+    <Content Include="CapaPresentacion\ClienteCrearReserv.aspx" />
+    <Content Include="CapaPresentacion\ClienteVerReserv.aspx" />
     <Content Include="CapaPresentacion\Admin.aspx" />
     <Content Include="CapaPresentacion\CSS\Estilos.css" />
     <Content Include="CapaPresentacion\JS\js.js" />
@@ -162,12 +163,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="CapaPresentacion\Cliente.aspx.cs">
-      <DependentUpon>Cliente.aspx</DependentUpon>
+    <Compile Include="CapaPresentacion\ClienteCrearReserv.aspx.cs">
+      <DependentUpon>ClienteCrearReserv.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CapaPresentacion\Cliente.aspx.designer.cs">
-      <DependentUpon>Cliente.aspx</DependentUpon>
+    <Compile Include="CapaPresentacion\ClienteCrearReserv.aspx.designer.cs">
+      <DependentUpon>ClienteCrearReserv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\ClienteVerReserv.aspx.cs">
+      <DependentUpon>ClienteVerReserv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\ClienteVerReserv.aspx.designer.cs">
+      <DependentUpon>ClienteVerReserv.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="CapaAccesoDatos\ConexionAdminEmpresa.cs" />
