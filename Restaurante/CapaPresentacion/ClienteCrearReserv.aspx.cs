@@ -9,7 +9,18 @@ namespace Restaurante.CapaPresentacion
 {
     public partial class ClienteCrearReserv : System.Web.UI.Page
     {
+        string hoyfecha = DateTime.Now.ToString("dd\\/MM\\/yyyy");
         protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void fechahoy_TextChanged(object sender, EventArgs e)
         {
 
         }
