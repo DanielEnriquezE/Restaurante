@@ -45,7 +45,9 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Mi aplicación ASP.NET</p>
+                <p>&copy; <%: DateTime.Now.Year %> - Restaurante Viva 
+                        <strong id="me">Mé</strong><strong id="xi">xi</strong>
+                    <strong id="co">co</strong> S.A. de C.V.
             </footer>
         </div>
 
