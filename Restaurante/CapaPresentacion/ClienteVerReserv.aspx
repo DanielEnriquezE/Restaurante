@@ -12,15 +12,20 @@
             <td style="width: 50%">                
                 <asp:Label ID="lblTuinformacion" runat="server" Text="Tu informacion  " Font-Bold="True" />
                 <br /><br />
-                <asp:Label ID="lblNombre" runat="server" Text="Nombre:  " />
+                <asp:Label ID="lbl2" runat="server" Text="Nombre:  " />
+                <asp:Label ID="lblNombre" runat="server" Text="prueba"/>
                 <br /><br />
-                <asp:Label ID="LabeApellidos" runat="server" Text="Apellidos:  " />
+                <asp:Label ID="lbl3" runat="server" Text="Apellidos:  " />
+                <asp:Label ID="lblApellidos" runat="server" Text="prueba2"/>
                 <br /><br />
-                <asp:Label ID="LabelEdad" runat="server" Text="Edad:  " />
+                <asp:Label ID="lbl4" runat="server" Text="Edad:  " />
+                <asp:Label ID="lblEdad" runat="server" Text="prueba"/>
                 <br /><br />
-                <asp:Label ID="LabelHorario" runat="server" Text="Horario:  " />
+                <asp:Label ID="lbl5" runat="server" Text="Horario:  " />
+                <asp:Label ID="lblHorario" runat="server" Text="prueba"/>
                 <br /><br />
-                <asp:Label ID="LabelMesa" runat="server" Text="Mesa:  " />
+                <asp:Label ID="lbl6" runat="server" Text="Mesa:  " />
+                <asp:Label ID="lblMesa" runat="server" Text="prueba"/>
         </td>
         <td style="width: 50%">
              <table style="width: 100%; height: 100%">              
