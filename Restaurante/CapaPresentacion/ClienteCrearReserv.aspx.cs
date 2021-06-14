@@ -13,5 +13,15 @@ namespace Restaurante.CapaPresentacion
         {
 
         }
+
+        protected void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void fechahoy_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
