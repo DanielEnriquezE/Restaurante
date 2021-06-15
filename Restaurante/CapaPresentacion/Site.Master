@@ -35,6 +35,7 @@
                         <li><a runat="server" href="Index.aspx">Inicio</a></li>
                         <li><a runat="server" href="ClienteCrearReserv.aspx">Solicitar Reservación</a></li>
                         <li><a runat="server" href="ClienteVerReserv.aspx">Consultar Reservación</a></li>
+                        <li><a runat="server" href="GuiaNavegacion.aspx">Guía de Navegación</a></li>
                     </ul>
                 </div>
             </div>
