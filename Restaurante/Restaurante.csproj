@@ -108,6 +108,7 @@
     <Content Include="CapaPresentacion\ClienteVerReserv.aspx" />
     <Content Include="CapaPresentacion\Admin.aspx" />
     <Content Include="CapaPresentacion\CSS\Estilos.css" />
+    <Content Include="CapaPresentacion\GuiaNavegacion.aspx" />
     <Content Include="CapaPresentacion\JS\js.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -188,6 +189,13 @@
     <Compile Include="CapaPresentacion\Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CapaPresentacion\GuiaNavegacion.aspx.cs">
+      <DependentUpon>GuiaNavegacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\GuiaNavegacion.aspx.designer.cs">
+      <DependentUpon>GuiaNavegacion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CapaPresentacion\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -195,6 +203,7 @@
     <Compile Include="CapaPresentacion\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Conexion.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
