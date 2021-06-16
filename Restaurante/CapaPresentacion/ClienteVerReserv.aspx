@@ -25,7 +25,9 @@
                 <asp:Label ID="lblHorario" runat="server" Text="prueba"/>
                 <br /><br />
                 <asp:Label ID="lbl6" runat="server" Text="Mesa:  " />
-                <asp:Label ID="lblMesa" runat="server" Text="prueba"/>
+                <asp:Label ID="lblMesa" runat="server" Text=""/>
+                <br /><br />
+                <asp:TextBox ID="textPrueba" placeholder="Salida SQL prueba" runat="server" Width="211px"></asp:TextBox>
         </td>
         <td style="width: 50%">
              <table style="width: 100%; height: 100%">              
@@ -40,7 +42,7 @@
 
             </td>
         <td style="width: 60%">
-            <asp:Button ID="botonConsultar" runat="server" Text="Consultar" Width="138px" Height="62px"/><br />
+            <asp:Button ID="botonConsultar" runat="server" Text="Consultar" Width="138px" Height="62px" OnClick="botonConsultar_Click"/><br />
             </td>
     </tr>        
         </td>

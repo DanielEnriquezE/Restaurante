@@ -54,7 +54,7 @@
                 </asp:RequiredFieldValidator>
         </td>
         <td style="width: 50%">
-            <p> La siguiente tabla muestra la cantidad de mesas disponibles en el horario elegido</p>
+            <p> La siguiente tabla muestra la cantidad de mesas disponibles en el horario elegido.</p>
         </td>
     </tr>        
     <tr>            
@@ -63,7 +63,7 @@
             <asp:CheckBox ID="CheckBoxConfirmar" runat="server" />
             <asp:Label runat="server" Text="Doy fe que los datos ingresados son los correctos y
                 que puede que tenga que confirmar mi identidad en el establecimiento al 
-                ingresar" /><br /><br />            
+                ingresar" />.<br /><br />            
             <center>
                 <asp:Button ID="botonReservar" runat="server" Text="Confirmar reservación" Width="199px"/><br />
             </center>
