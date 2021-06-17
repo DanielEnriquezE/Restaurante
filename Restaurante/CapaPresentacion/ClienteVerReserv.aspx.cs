@@ -23,13 +23,18 @@ namespace Restaurante
 
             cn.Open();
 
-            SqlCommand cmd = new SqlCommand("Select NUmSilla from [Restaurante].[dbo].[Mesa] where NumMesa = 2", cn);
+            SqlCommand cmd = new SqlCommand("Select a.Nombre, a.ApellidoP+' '+a.ApellidoM, a.Edad, b.Hora, b.Mesa_id from Cliente A inner join Reservacion B on A.Cliente_id=B.Cliente_id where a.Cliente_id = @ClienteId", cn);
+            cmd.Parameters.AddWithValue("@ClienteId", int.Parse(txtNumeroReservacion.Text));
             SqlDataReader sa = cmd.ExecuteReader();
             while (sa.Read())
             {
-                textPrueba.Text = sa.GetValue(0).ToString();
+                lblNombre.Text = sa.GetValue(0).ToString();
+                lblApellidos.Text = sa.GetValue(1).ToString();
+                lblEdad.Text = sa.GetValue(2).ToString();
+                lblHorario.Text = sa.GetValue(3).ToString();
+                lblMesa.Text = sa.GetValue(4).ToString();
             }
-            
+
             cn.Close();
         }
 

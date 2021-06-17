@@ -10,24 +10,22 @@
     <table style="width: 100%; height: 100%">
         <tr>
             <td style="width: 50%">                
-                <asp:Label ID="lblTuinformacion" runat="server" Text="Tu informacion  " Font-Bold="True" />
+                <asp:Label ID="lblTuinformacion" runat="server" Text="Tu información  " Font-Bold="True" />
                 <br /><br />
                 <asp:Label ID="lbl2" runat="server" Text="Nombre:  " />
-                <asp:Label ID="lblNombre" runat="server" Text="prueba"/>
+                <asp:Label ID="lblNombre" runat="server" Text="" Font-Bold="True"/>
                 <br /><br />
                 <asp:Label ID="lbl3" runat="server" Text="Apellidos:  " />
-                <asp:Label ID="lblApellidos" runat="server" Text="prueba2"/>
+                <asp:Label ID="lblApellidos" runat="server" Text="" Font-Bold="True"/>
                 <br /><br />
                 <asp:Label ID="lbl4" runat="server" Text="Edad:  " />
-                <asp:Label ID="lblEdad" runat="server" Text="prueba"/>
+                <asp:Label ID="lblEdad" runat="server" Text="" Font-Bold="True"/>
                 <br /><br />
                 <asp:Label ID="lbl5" runat="server" Text="Horario:  " />
-                <asp:Label ID="lblHorario" runat="server" Text="prueba"/>
+                <asp:Label ID="lblHorario" runat="server" Text="" Font-Bold="True"/>
                 <br /><br />
                 <asp:Label ID="lbl6" runat="server" Text="Mesa:  " />
-                <asp:Label ID="lblMesa" runat="server" Text=""/>
-                <br /><br />
-                <asp:TextBox ID="textPrueba" placeholder="Salida SQL prueba" runat="server" Width="211px"></asp:TextBox>
+                <asp:Label ID="lblMesa" runat="server" Font-Bold="True"/>
         </td>
         <td style="width: 50%">
              <table style="width: 100%; height: 100%">              

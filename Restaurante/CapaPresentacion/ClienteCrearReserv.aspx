@@ -41,12 +41,12 @@
                     <br /><br />   
                
                 <asp:Label ID="lblHorario" runat="server" Text="Elige un horario:  " />
-                <asp:TextBox ID="fecha" placeholder="fecha" type="date" min="2021-06-10" runat="server"></asp:TextBox>
+                <asp:TextBox ID="fecha" placeholder="fecha" type="date" min="2021-06-17" runat="server"></asp:TextBox>
                 <asp:DropDownList ID="DropDownHorario" runat="server">
-                    <asp:ListItem>12:00pm-2:00pm</asp:ListItem>
-                    <asp:ListItem>3:00pm-5:00pm</asp:ListItem>
-                    <asp:ListItem>6:00pm-8:00pm</asp:ListItem>
-                    <asp:ListItem>9:00pm-11:00pm</asp:ListItem>
+                    <asp:ListItem>1200</asp:ListItem>
+                    <asp:ListItem>3:00pm</asp:ListItem>
+                    <asp:ListItem>6:00pm</asp:ListItem>
+                    <asp:ListItem>9:00pm</asp:ListItem>
                 </asp:DropDownList>               
                 <asp:RequiredFieldValidator ID="ValidadorFecha" runat="server" 
                     ErrorMessage="  Falta elegir una fecha" ControlToValidate="fecha"
@@ -54,18 +54,39 @@
                 </asp:RequiredFieldValidator>
         </td>
         <td style="width: 50%">
-            <p> La siguiente tabla muestra la cantidad de mesas disponibles en el horario elegido.</p>
+            <p> La siguiente tabla muestra la cantidad de mesas disponibles en el horario elegido</p>
+            <asp:GridView runat="server" ID="gvMesas" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal" OnSelectedIndexChanged="gvMesas_SelectedIndexChanged" AutoGenerateColumns="False" DataKeyNames="NumMesa" DataSourceID="SqlDataSource1" Height="126px" Width="401px">
+                <Columns>
+                    <asp:ButtonField ButtonType="Button" CommandName="Select" HeaderText="Acciones" ShowHeader="True" Text="Elegir" />
+                </Columns>
+                <Columns>
+                    <asp:BoundField DataField="NumMesa" HeaderText="Numero de Mesa" ReadOnly="True" SortExpression="Numero de Mesa" />
+                    <asp:BoundField DataField="NUmSilla" HeaderText="Numero de sillas" SortExpression="Numero de sillas" />
+                </Columns>
+                <FooterStyle BackColor="White" ForeColor="#333333" />
+                <HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#336666" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="White" ForeColor="#333333" />
+                <SelectedRowStyle BackColor="#339966" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                <SortedAscendingHeaderStyle BackColor="#487575" />
+                <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                <SortedDescendingHeaderStyle BackColor="#275353" />
+            </asp:GridView>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:RestauranteConnectionString %>" SelectCommand="Select NumMesa, NUmSilla from Mesa where Disponible = 1"></asp:SqlDataSource>
+            <asp:Label ID="lblMesaElegida" runat="server" Text=""></asp:Label>
         </td>
     </tr>        
     <tr>            
         <td colspan="2">                
+            <asp:Button ID="btnBuscar" runat="server" OnClick="btnBuscar_Click" Text="Consultar Mesas disponibles" />
             <br /><br />
             <asp:CheckBox ID="CheckBoxConfirmar" runat="server" />
             <asp:Label runat="server" Text="Doy fe que los datos ingresados son los correctos y
                 que puede que tenga que confirmar mi identidad en el establecimiento al 
-                ingresar" />.<br /><br />            
+                ingresar" /><br /><br />            
             <center>
-                <asp:Button ID="botonReservar" runat="server" Text="Confirmar reservación" Width="199px"/><br />
+                <asp:Button ID="botonReservar" runat="server" Text="Confirmar reservación" Width="199px" OnClick="botonReservar_Click"/><br />
             </center>
         </td>
     </tr>
