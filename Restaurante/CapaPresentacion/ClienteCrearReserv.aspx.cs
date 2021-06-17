@@ -10,7 +10,7 @@ using System.Data.SqlClient;
 
 namespace Restaurante.CapaPresentacion
 {
-
+    
     public partial class ClienteCrearReserv : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
@@ -20,42 +20,72 @@ namespace Restaurante.CapaPresentacion
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
+            Response.Write("<script>alert('No hay mesa')</script>");
 
-            SqlConnection cn = new SqlConnection("Data Source=alanserver-1200.database.windows.net;DATABASE=Restaurante;uid=usuario;pwd=Aprendeaprogramar123;integrated security=false");
-
-            cn.Open();
-
-            SqlCommand cmd = new SqlCommand("Select NumMesa, NUmSilla from Mesa", cn);
-            SqlDataReader sa = cmd.ExecuteReader();
-            while (sa.Read())
-            {
-                gvMesas.DataSource = sa.GetValue(0).ToString();
-            }
-
-            cn.Close();
 
         }
 
         protected void gvMesas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string mesaSeleccionada;
-            mesaSeleccionada = gvMesas.SelectedRow.Cells[0].Text;
-            lblMesaElegida.Text = mesaSeleccionada;
+            int rowindex = Convert.ToInt32(gvMesas.SelectedIndex);
+
+            lblMesaElegida.Text = "Mesa elegida: " + gvMesas.Rows[rowindex].Cells[1].Text;
 
         }
 
+
+
         protected void botonReservar_Click(object sender, EventArgs e)
         {
+
+            int rowindex = Convert.ToInt32(gvMesas.SelectedIndex);
+
+            lblMesaElegida.Text = "Mesa elegida: " + gvMesas.Rows[rowindex].Cells[1].Text;
 
             SqlConnection cn = new SqlConnection("Data Source=alanserver-1200.database.windows.net;DATABASE=Restaurante;uid=usuario;pwd=Aprendeaprogramar123;integrated security=false");
 
             cn.Open();
             SqlCommand cmd = cn.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "insert into Cliente (Cliente_id, Nombre, ApellidoP, ApellidoM, Edad) values (7325, '" + txtNombre.Text + "', '" + txtApellidos.Text + "', '" + txtApellidos.Text + "' ,'" + txtEdad.Text + "') insert into Reservacion (Cliente_id, Mesa_id, Fecha, Hora) values (7325, 3, 180621, '" + Convert.ToInt32(this.DropDownHorario.Text) + "')";
-
+            cmd.CommandText = "insert into Cliente (Cliente_id, Nombre, ApellidoP, ApellidoM, Edad) values (7325, '" + txtNombre.Text + "', '" + txtApellidoP.Text + "', '" + txtApellidoM.Text + "' ,'" + txtEdad.Text + "') insert into Reservacion (Cliente_id, Mesa_id, Fecha, Hora) values (7325, '"+ gvMesas.Rows[rowindex].Cells[1].Text + "', '"+fecha.Text.Substring(0,4) + fecha.Text.Substring(5, 2) + fecha.Text.Substring(8, 2)+ "', '" + DropDownHorario.Text.Substring(0, 2) + "00"+"')";
             cmd.ExecuteNonQuery();
             cn.Close();
+        }
+
+        protected void fecha_TextChanged(object sender, EventArgs e)
+        {
+            if(Existe(fecha.Text.Substring(0, 4) + fecha.Text.Substring(5, 2) + fecha.Text.Substring(8, 2))==true)
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('no hay mesa')", true);
+            }
+            else{
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Record Inserted Successfully')", true);
+            }
+
+
+        }
+        public bool Existe(string fecha)
+        {
+            string sql = @"SELECT COUNT(*) FROM Reservacion WHERE Fecha = @fechaSeleccionada";
+
+            using (SqlConnection conn = new SqlConnection("Data Source=alanserver-1200.database.windows.net;DATABASE=Restaurante;uid=usuario;pwd=Aprendeaprogramar123;integrated security=false"))
+            {
+                conn.Open();
+
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@fechaSeleccionada", fecha);
+
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+
+                return count == 4;
+
+
+            }
+        }
+
+        protected void SqlDataSource1_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
+        {
+
         }
     }
 }

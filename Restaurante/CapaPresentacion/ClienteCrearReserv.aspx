@@ -20,11 +20,15 @@
                 </asp:RequiredFieldValidator>
                 <br /><br />
 
-                <asp:Label ID="lblApellidos" runat="server" Text="Tus apellidos:  " />
-                <asp:TextBox ID="txtApellidos" placeholder="Tus apellidos" runat="server"></asp:TextBox>  
+                <asp:Label ID="lblApellidoP" runat="server" Text="Apellido Paterno:  " />
+                <asp:TextBox ID="txtApellidoP" placeholder="Tus apellidos" runat="server"></asp:TextBox>  
                 <asp:RequiredFieldValidator ID="ValidadorApellido" runat="server" 
-                    ErrorMessage="  Ingresa tus apellidos" ControlToValidate="txtApellidos" ForeColor="Red">
+                    ErrorMessage="  Ingresa tu apellido paterno" ControlToValidate="txtApellidoP" ForeColor="Red">
                 </asp:RequiredFieldValidator>
+                <br /><br />
+
+                <asp:Label ID="lblApellidoM" runat="server" Text="Apellido Materno:  " />
+                <asp:TextBox ID="txtApellidoM" placeholder="Tus apellidos" runat="server"></asp:TextBox>   
                 <br /><br />      
 
                 <asp:Label ID="lblEdad" runat="server" Text="Tu Edad:  " />
@@ -41,13 +45,7 @@
                     <br /><br />   
                
                 <asp:Label ID="lblHorario" runat="server" Text="Elige un horario:  " />
-                <asp:TextBox ID="fecha" placeholder="fecha" type="date" min="2021-06-17" runat="server"></asp:TextBox>
-                <asp:DropDownList ID="DropDownHorario" runat="server">
-                    <asp:ListItem>1200</asp:ListItem>
-                    <asp:ListItem>3:00pm</asp:ListItem>
-                    <asp:ListItem>6:00pm</asp:ListItem>
-                    <asp:ListItem>9:00pm</asp:ListItem>
-                </asp:DropDownList>               
+                <asp:TextBox ID="fecha" placeholder="fecha" type="date" min="2021-06-17" runat="server" OnTextChanged="fecha_TextChanged"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="ValidadorFecha" runat="server" 
                     ErrorMessage="  Falta elegir una fecha" ControlToValidate="fecha"
                     ForeColor="Red">
@@ -55,7 +53,7 @@
         </td>
         <td style="width: 50%">
             <p> La siguiente tabla muestra la cantidad de mesas disponibles en el horario elegido</p>
-            <asp:GridView runat="server" ID="gvMesas" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal" OnSelectedIndexChanged="gvMesas_SelectedIndexChanged" AutoGenerateColumns="False" DataKeyNames="NumMesa" DataSourceID="SqlDataSource1" Height="126px" Width="401px">
+            <asp:GridView runat="server" ID="gvMesas" Enabled="false" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal" OnSelectedIndexChanged="gvMesas_SelectedIndexChanged" AutoGenerateColumns="False" DataKeyNames="NumMesa" DataSourceID="SqlDataSource1" Height="126px" Width="401px">
                 <Columns>
                     <asp:ButtonField ButtonType="Button" CommandName="Select" HeaderText="Acciones" ShowHeader="True" Text="Elegir" />
                 </Columns>
@@ -73,8 +71,16 @@
                 <SortedDescendingCellStyle BackColor="#E5E5E5" />
                 <SortedDescendingHeaderStyle BackColor="#275353" />
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:RestauranteConnectionString %>" SelectCommand="SELECT [NumMesa], [NUmSilla] FROM [Mesa]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:RestauranteConnectionString %>" SelectCommand="Select * from Mesa where Disponible = 1" OnSelecting="SqlDataSource1_Selecting"></asp:SqlDataSource>
             <asp:Label ID="lblMesaElegida" runat="server" Text=""></asp:Label>
+            <br /><br />
+                <asp:DropDownList ID="DropDownHorario" Enabled="false" runat="server">
+                    <asp:ListItem></asp:ListItem>
+                    <asp:ListItem>12:00hrs</asp:ListItem>
+                    <asp:ListItem>15:00hrs</asp:ListItem>
+                    <asp:ListItem>18:00hrs</asp:ListItem>
+                    <asp:ListItem>21:00hrs</asp:ListItem>
+                </asp:DropDownList>               
         </td>
     </tr>        
     <tr>            
