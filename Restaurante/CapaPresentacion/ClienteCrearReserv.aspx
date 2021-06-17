@@ -73,7 +73,7 @@
                 <SortedDescendingCellStyle BackColor="#E5E5E5" />
                 <SortedDescendingHeaderStyle BackColor="#275353" />
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:RestauranteConnectionString %>" SelectCommand="Select NumMesa, NUmSilla from Mesa where Disponible = 1"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:RestauranteConnectionString %>" SelectCommand="SELECT [NumMesa], [NUmSilla] FROM [Mesa]"></asp:SqlDataSource>
             <asp:Label ID="lblMesaElegida" runat="server" Text=""></asp:Label>
         </td>
     </tr>        
