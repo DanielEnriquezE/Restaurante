@@ -13,5 +13,9 @@ namespace Restaurante
         {
 
         }
+        protected void gvMesasAdmin_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
