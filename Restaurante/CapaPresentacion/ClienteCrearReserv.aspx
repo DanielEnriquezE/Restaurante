@@ -71,7 +71,8 @@
                 <SortedDescendingCellStyle BackColor="#E5E5E5" />
                 <SortedDescendingHeaderStyle BackColor="#275353" />
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:RestauranteConnectionString %>" SelectCommand="Select * from Mesa where Disponible = 1" OnSelecting="SqlDataSource1_Selecting"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:RestauranteConnectionString %>" SelectCommand="Select NumMesa, NUmSilla from Mesa where not exists (select 1 from Reservacion where Reservacion.Mesa_id = Mesa.NumMesa and Fecha = 20210617 and Hora=1200)
+" OnSelecting="SqlDataSource1_Selecting" ProviderName="System.Data.SqlClient"></asp:SqlDataSource>
             <asp:Label ID="lblMesaElegida" runat="server" Text=""></asp:Label>
             <br /><br />
                 <asp:DropDownList ID="DropDownHorario" Enabled="false" runat="server">
