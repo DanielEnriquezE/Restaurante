@@ -104,12 +104,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CapaPresentacion\Admin.aspx" />
     <Content Include="CapaPresentacion\ClienteCrearReserv.aspx" />
     <Content Include="CapaPresentacion\ClienteVerReserv.aspx" />
-    <Content Include="CapaPresentacion\Admin.aspx" />
     <Content Include="CapaPresentacion\CSS\Estilos.css" />
     <Content Include="CapaPresentacion\GuiaNavegacion.aspx" />
     <Content Include="CapaPresentacion\JS\js.js" />
+    <Content Include="CapaPresentacion\Modificar.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -157,12 +158,20 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="CapaPresentacion\Site.Master" />
+    <Content Include="CapaPresentacion\VentanaConfirmarReservacion.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="CapaPresentacion\Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CapaPresentacion\ClienteCrearReserv.aspx.cs">
       <DependentUpon>ClienteCrearReserv.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -182,13 +191,6 @@
     <Compile Include="CapaAccesoDatos\ConexionBD.cs" />
     <Compile Include="CapaAccesoDatos\ConexionCliente.cs" />
     <Compile Include="CapaLogicaNegocio\Cliente.cs" />
-    <Compile Include="CapaPresentacion\Admin.aspx.cs">
-      <DependentUpon>Admin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CapaPresentacion\Admin.aspx.designer.cs">
-      <DependentUpon>Admin.aspx</DependentUpon>
-    </Compile>
     <Compile Include="CapaPresentacion\GuiaNavegacion.aspx.cs">
       <DependentUpon>GuiaNavegacion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -203,6 +205,13 @@
     <Compile Include="CapaPresentacion\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CapaPresentacion\Modificar.aspx.cs">
+      <DependentUpon>Modificar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Modificar.aspx.designer.cs">
+      <DependentUpon>Modificar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Conexion.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -214,6 +223,13 @@
     </Compile>
     <Compile Include="CapaPresentacion\Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\VentanaConfirmarReservacion.aspx.cs">
+      <DependentUpon>VentanaConfirmarReservacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\VentanaConfirmarReservacion.aspx.designer.cs">
+      <DependentUpon>VentanaConfirmarReservacion.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

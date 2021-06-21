@@ -1,9 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ClienteCrearReserv.aspx.cs" 
-    Inherits="Restaurante.CapaPresentacion.ClienteCrearReserv" 
-    MasterPageFile="~/CapaPresentacion/Site.Master"%>
-
-<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <center>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CapaPresentacion/Site.Master" AutoEventWireup="true" CodeBehind="Modificar.aspx.cs" Inherits="Restaurante.CapaPresentacion.Modificar" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+        <center>
         <h1 id="titulo">Que la tradición Mexicana corra por tu paladar ;)</h1>
         <h3 id="subtitulo">Solicita una reservación ahora!</h3>
         <p id="textoGuia"> Si es la primera vez que reservas con nosotros, o tienes dudas 
@@ -42,13 +39,15 @@
                 <asp:RequiredFieldValidator ID="ValidadorEdad1" runat="server" 
                     ErrorMessage="Introduce tu edad por favor" ForeColor="Red"
                     ControlToValidate="txtEdad"></asp:RequiredFieldValidator>
+                <br /><br />
+                <asp:Label ID="Label1" runat="server" Text="Hora seleccionada previamente:  " />    
+                <asp:TextBox ID="TextBox1" runat="server" Enabled="false"></asp:TextBox>
                     <br /><br />   
                
                 <asp:Label ID="lblHorario" runat="server" Text="Elige un horario:  " />
                 <asp:TextBox ID="fecha" placeholder="fecha" type="date" min="2021-06-17" 
-                    runat="server" AutoPostBack="true"
-                    OnTextChanged="fecha_TextChanged"></asp:TextBox>
-                <asp:DropDownList ID="DropDownHorario" Enabled="false" runat="server">
+                    runat="server" OnTextChanged="fecha_TextChanged"></asp:TextBox>
+                <asp:DropDownList ID="DropDownHorario" Enabled="true" runat="server" OnSelectedIndexChanged="DropDownHorario_SelectedIndexChanged">
                     <asp:ListItem></asp:ListItem>
                     <asp:ListItem>12:00hrs</asp:ListItem>
                     <asp:ListItem>15:00hrs</asp:ListItem>
@@ -80,7 +79,6 @@
                 <SortedDescendingCellStyle BackColor="#E5E5E5" />
                 <SortedDescendingHeaderStyle BackColor="#275353" />
             </asp:GridView>
-
             <asp:Label runat="server" Text="Mesa elegida: " />
             <asp:Label ID="lblMesaElegida" runat="server" Text="" ></asp:Label>
             <br /><br />
@@ -95,7 +93,7 @@
                 que puede que tenga que confirmar mi identidad en el establecimiento al 
                 ingresar.." /><br /><br />            
             <center>
-                <asp:Button ID="botonReservar" runat="server" Text="Confirmar reservación" Width="199px" OnClick="botonReservar_Click"/><br />
+                <asp:Button ID="botonReservar" runat="server" Text="Guardar Cambios" Width="199px" OnClick="botonReservar_Click"/><br />
             </center>
         </td>
     </tr>

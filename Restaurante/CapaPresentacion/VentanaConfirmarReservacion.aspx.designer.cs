@@ -7,12 +7,48 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Restaurante.CapaPresentacion
+namespace Restaurante
 {
 
 
-    public partial class ClienteCrearReserv
+    public partial class VentanaConfirmarReservacion
     {
+
+        /// <summary>
+        /// Control lblTuinformacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTuinformacion;
+
+        /// <summary>
+        /// Control Label1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
+
+        /// <summary>
+        /// Control LabelNumeroReservacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelNumeroReservacion;
+
+        /// <summary>
+        /// Control lbl2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl2;
 
         /// <summary>
         /// Control lblNombre.
@@ -24,67 +60,31 @@ namespace Restaurante.CapaPresentacion
         protected global::System.Web.UI.WebControls.Label lblNombre;
 
         /// <summary>
-        /// Control txtNombre.
+        /// Control lbl3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombre;
+        protected global::System.Web.UI.WebControls.Label lbl3;
 
         /// <summary>
-        /// Control ValidadorNombre.
+        /// Control lblApellidos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidadorNombre;
+        protected global::System.Web.UI.WebControls.Label lblApellidos;
 
         /// <summary>
-        /// Control lblApellidoP.
+        /// Control lbl4.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblApellidoP;
-
-        /// <summary>
-        /// Control txtApellidoP.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtApellidoP;
-
-        /// <summary>
-        /// Control ValidadorApellido.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidadorApellido;
-
-        /// <summary>
-        /// Control lblApellidoM.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblApellidoM;
-
-        /// <summary>
-        /// Control txtApellidoM.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtApellidoM;
+        protected global::System.Web.UI.WebControls.Label lbl4;
 
         /// <summary>
         /// Control lblEdad.
@@ -96,31 +96,31 @@ namespace Restaurante.CapaPresentacion
         protected global::System.Web.UI.WebControls.Label lblEdad;
 
         /// <summary>
-        /// Control txtEdad.
+        /// Control Label2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEdad;
+        protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// Control ValidadorEdad.
+        /// Control lblFecha.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator ValidadorEdad;
+        protected global::System.Web.UI.WebControls.Label lblFecha;
 
         /// <summary>
-        /// Control ValidadorEdad1.
+        /// Control lbl5.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidadorEdad1;
+        protected global::System.Web.UI.WebControls.Label lbl5;
 
         /// <summary>
         /// Control lblHorario.
@@ -132,75 +132,39 @@ namespace Restaurante.CapaPresentacion
         protected global::System.Web.UI.WebControls.Label lblHorario;
 
         /// <summary>
-        /// Control fecha.
+        /// Control lbl6.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox fecha;
+        protected global::System.Web.UI.WebControls.Label lbl6;
 
         /// <summary>
-        /// Control DropDownHorario.
+        /// Control lblMesa.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownHorario;
+        protected global::System.Web.UI.WebControls.Label lblMesa;
 
         /// <summary>
-        /// Control ValidadorFecha.
+        /// Control eliminarReservacion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidadorFecha;
+        protected global::System.Web.UI.WebControls.Button eliminarReservacion;
 
         /// <summary>
-        /// Control gvMesas.
+        /// Control modificarReservacion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvMesas;
-
-        /// <summary>
-        /// Control lblMesaElegida.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMesaElegida;
-
-        /// <summary>
-        /// Control btnBuscar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBuscar;
-
-        /// <summary>
-        /// Control CheckBoxConfirmar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBoxConfirmar;
-
-        /// <summary>
-        /// Control botonReservar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button botonReservar;
+        protected global::System.Web.UI.WebControls.Button modificarReservacion;
     }
 }
