@@ -29,7 +29,7 @@ namespace Restaurante.CapaPresentacion
         {
             int rowindex = Convert.ToInt32(gvMesas.SelectedIndex);
 
-            lblMesaElegida.Text = "Mesa elegida: " + gvMesas.Rows[rowindex].Cells[1].Text;
+            lblMesaElegida.Text = gvMesas.Rows[rowindex].Cells[1].Text;
 
         }
 
@@ -40,7 +40,7 @@ namespace Restaurante.CapaPresentacion
 
             int rowindex = Convert.ToInt32(gvMesas.SelectedIndex);
 
-            lblMesaElegida.Text = "Mesa elegida: " + gvMesas.Rows[rowindex].Cells[1].Text;
+            lblMesaElegida.Text = gvMesas.Rows[rowindex].Cells[1].Text;
 
             SqlConnection cn = new SqlConnection("Data Source=alanserver-1200.database.windows.net;DATABASE=Restaurante;uid=usuario;pwd=Aprendeaprogramar123;integrated security=false");
 
@@ -54,6 +54,8 @@ namespace Restaurante.CapaPresentacion
 
         protected void fecha_TextChanged(object sender, EventArgs e)
         {
+            DropDownHorario.Enabled = true;
+                                    
             if(Existe(fecha.Text.Substring(0, 4) + fecha.Text.Substring(5, 2) + fecha.Text.Substring(8, 2))==true)
             {
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('no hay mesa')", true);
@@ -61,6 +63,7 @@ namespace Restaurante.CapaPresentacion
             else{
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Record Inserted Successfully')", true);
             }
+            
 
 
         }
@@ -81,6 +84,10 @@ namespace Restaurante.CapaPresentacion
 
 
             }
+        }
+        protected void BuscarMesa(string fecha, string hora)
+        {
+
         }
 
         protected void SqlDataSource1_Selecting(object sender, SqlDataSourceSelectingEventArgs e)

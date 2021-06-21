@@ -141,6 +141,15 @@ namespace Restaurante.CapaPresentacion
         protected global::System.Web.UI.WebControls.TextBox fecha;
 
         /// <summary>
+        /// Control DropDownHorario.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownHorario;
+
+        /// <summary>
         /// Control ValidadorFecha.
         /// </summary>
         /// <remarks>
@@ -175,15 +184,6 @@ namespace Restaurante.CapaPresentacion
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMesaElegida;
-
-        /// <summary>
-        /// Control DropDownHorario.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownHorario;
 
         /// <summary>
         /// Control btnBuscar.
