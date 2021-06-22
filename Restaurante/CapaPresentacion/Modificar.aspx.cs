@@ -69,6 +69,7 @@ namespace Restaurante.CapaPresentacion
             gvMesas.DataSource = tablaResult;
             gvMesas.DataBind();
             cn.Close();
+            validarNumeroMesa.Enabled = true;
         }
 
         protected void gvMesas_SelectedIndexChanged(object sender, EventArgs e)
@@ -76,6 +77,8 @@ namespace Restaurante.CapaPresentacion
             int rowindex = Convert.ToInt32(gvMesas.SelectedIndex);
 
             lblMesaElegida.Text = gvMesas.Rows[rowindex].Cells[1].Text;
+
+            botonReservar.Enabled = true;
 
         }
 
@@ -137,6 +140,11 @@ namespace Restaurante.CapaPresentacion
 
         protected void DropDownHorario_SelectedIndexChanged(object sender, EventArgs e)
         {
+        }
+
+        protected void lblMesaElegida_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

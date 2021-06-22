@@ -44,6 +44,6 @@
 
              <asp:Button ID="eliminarReservacion" runat="server" Text="Eliminar Reservación" OnClick="eliminarReservacion_Click" />
             <br /><br />
-            <asp:Button ID="modificarReservacion" Enabled="false" runat="server" Text="Modificar Reservación" OnClick="modificarReservacion_Click" />
+            <asp:Button ID="modificarReservacion" runat="server" Text="Modificar Reservación" OnClick="modificarReservacion_Click" />
         </table>
 </asp:Content>
