@@ -89,6 +89,10 @@
                         <asp:TextBox ID="fecha" placeholder="fecha" type="date" min="2021-06-17" 
                             runat="server" AutoPostBack="true"
                             OnTextChanged="fecha_TextChanged"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="ValidadorFecha" runat="server" 
+                            ErrorMessage="  Falta elegir una fecha" ControlToValidate="fecha"
+                            ForeColor="Red">
+                        </asp:RequiredFieldValidator>
                         <asp:DropDownList ID="DropDownHorario" Enabled="false" runat="server">
                             <asp:ListItem></asp:ListItem>
                             <asp:ListItem>12:00hrs</asp:ListItem>
@@ -96,8 +100,8 @@
                             <asp:ListItem>18:00hrs</asp:ListItem>
                             <asp:ListItem>21:00hrs</asp:ListItem>
                         </asp:DropDownList>               
-                        <asp:RequiredFieldValidator ID="ValidadorFecha" runat="server" 
-                            ErrorMessage="  Falta elegir una fecha" ControlToValidate="fecha"
+                        <asp:RequiredFieldValidator ID="ValidadorHora" runat="server" 
+                            ErrorMessage="  Falta elegir una hora" ControlToValidate="DropDownHorario"
                             ForeColor="Red">
                         </asp:RequiredFieldValidator>
                     </td>
@@ -137,16 +141,19 @@
                 <SortedDescendingCellStyle BackColor="#E5E5E5" />
                 <SortedDescendingHeaderStyle BackColor="#275353" />
             </asp:GridView>
-
             <asp:Label runat="server" Text="Mesa elegida: " />
-            <asp:Label ID="lblMesaElegida" runat="server" Text="" ForeColor="White"></asp:Label>
+            <asp:TextBox ID="lblMesaElegida" Enabled="false" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="validarNumeroMesa" Enabled="false" runat="server" 
+                            ErrorMessage="  Falta elegir mesa" ControlToValidate="lblMesaElegida"
+                            ForeColor="Red">
+                        </asp:RequiredFieldValidator>
             <br /><br />
         </td>
     </tr>        
     <tr>            
         <td colspan="2">                                                       
             <center>
-                <asp:Button ID="botonReservar" runat="server" Text="Confirmar reservación" Width="199px" 
+                <asp:Button ID="botonReservar" enabled="false" runat="server" Text="Confirmar reservación" Width="199px" 
                     OnClick="botonReservar_Click"/><br />
             </center>
         </td>

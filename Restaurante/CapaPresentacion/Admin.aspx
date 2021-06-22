@@ -10,7 +10,12 @@
             <td style="width: 50%">
                 <div  style="margin-left: 10px; margin-top:10px; margin-bottom:10px;">
                     <asp:Label runat="server" Text="Número de reservación:   " />
-                    <asp:TextBox runat="server" ID="txtNumReservacion" /><br /><br />
+                    <asp:TextBox runat="server" ID="txtNumReservacion" />
+                    <asp:RequiredFieldValidator ID="validarNumeroReservacion" runat="server" 
+                            ErrorMessage="  Ingresa el numero de reservacion"
+                            ControlToValidate="txtNumReservacion" ForeColor="Red">
+                        </asp:RequiredFieldValidator>
+                    <br /><br />
                 
                     <asp:Label runat="server" Text="Nombre del cliente:   " />
                     <asp:Label runat="server" ID="txtNombreCliente" /> <br /><br />
@@ -60,7 +65,7 @@
                 <asp:Label runat="server" Text="Reservación elegida: " />
             <asp:Label ID="lblReservacionElegida" runat="server" Text="" ></asp:Label>
                 <br /><br />
-                <asp:Button ID="btnLiberarReservacion" runat="server" Text="Liberar Reservacion" OnClick="btnLiberarReservacion_Click" />
+                <asp:Button ID="btnLiberarReservacion" runat="server" Enabled="false" Text="Liberar Reservacion" OnClick="btnLiberarReservacion_Click" />
             </td>
         </tr>
 

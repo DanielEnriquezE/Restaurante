@@ -70,5 +70,10 @@ namespace Restaurante
             Session["crearReserv"] = txtNumeroReservacion.Text;
             Response.Redirect("Modificar.aspx");
         }
+
+        protected void lblHorario_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

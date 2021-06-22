@@ -48,7 +48,7 @@ namespace Restaurante.CapaPresentacion
             cn.Close();
 
             /*SqlDataSource1.SelectCommand= "Select NumMesa, NUmSilla from Mesa where not exists (select 1 from Reservacion where Reservacion.Mesa_id = Mesa.NumMesa and Fecha = @fechaSeleccionada and Hora= @horaSeleccionada)";*/
-
+            validarNumeroMesa.Enabled = true;
         }
 
         protected void gvMesas_SelectedIndexChanged(object sender, EventArgs e)
@@ -56,7 +56,7 @@ namespace Restaurante.CapaPresentacion
             int rowindex = Convert.ToInt32(gvMesas.SelectedIndex);
 
             lblMesaElegida.Text = gvMesas.Rows[rowindex].Cells[1].Text;
-
+            botonReservar.Enabled = true;
         }
 
 

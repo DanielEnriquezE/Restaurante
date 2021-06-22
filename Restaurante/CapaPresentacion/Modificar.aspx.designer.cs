@@ -159,6 +159,15 @@ namespace Restaurante.CapaPresentacion
         protected global::System.Web.UI.WebControls.TextBox fecha;
 
         /// <summary>
+        /// Control ValidadorFecha.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidadorFecha;
+
+        /// <summary>
         /// Control DropDownHorario.
         /// </summary>
         /// <remarks>
@@ -168,13 +177,13 @@ namespace Restaurante.CapaPresentacion
         protected global::System.Web.UI.WebControls.DropDownList DropDownHorario;
 
         /// <summary>
-        /// Control ValidadorFecha.
+        /// Control ValidadorHora.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidadorFecha;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidadorHora;
 
         /// <summary>
         /// Control gvMesas.
@@ -192,7 +201,16 @@ namespace Restaurante.CapaPresentacion
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMesaElegida;
+        protected global::System.Web.UI.WebControls.TextBox lblMesaElegida;
+
+        /// <summary>
+        /// Control validarNumeroMesa.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator validarNumeroMesa;
 
         /// <summary>
         /// Control btnBuscar.
@@ -202,15 +220,6 @@ namespace Restaurante.CapaPresentacion
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnBuscar;
-
-        /// <summary>
-        /// Control CheckBoxConfirmar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBoxConfirmar;
 
         /// <summary>
         /// Control botonReservar.

@@ -91,6 +91,9 @@ namespace Restaurante.CapaPresentacion
             int rowindex = Convert.ToInt32(gvMesasAdmin.SelectedIndex);
 
             lblReservacionElegida.Text = gvMesasAdmin.Rows[rowindex].Cells[1].Text;
+
+            btnLiberarReservacion.Enabled = true;
+
         }
 
         protected void btnLiberarReservacion_Click(object sender, EventArgs e)
