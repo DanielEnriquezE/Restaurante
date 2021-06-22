@@ -132,7 +132,6 @@
     <Content Include="CapaPresentacion\Imagenes\wallpapers\OIP.jpg" />
     <Content Include="CapaPresentacion\Imagenes\wallpapers\ouroboros-symbol-of-ancient-golden-snake-eating-its-tail-in-animated-circular-motion_bp3ufl38__F0014.png" />
     <Content Include="CapaPresentacion\Imagenes\wallpapers\patterns-lines-bright-color-wallpaper-preview.jpg" />
-    <Content Include="CapaPresentacion\JS\js.js" />
     <Content Include="CapaPresentacion\Modificar.aspx" />
     <Content Include="CapaPresentacion\ReservacionCancelada.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -211,10 +210,6 @@
       <DependentUpon>ClienteVerReserv.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="CapaAccesoDatos\ConexionAdminEmpresa.cs" />
-    <Compile Include="CapaAccesoDatos\ConexionBD.cs" />
-    <Compile Include="CapaAccesoDatos\ConexionCliente.cs" />
-    <Compile Include="CapaLogicaNegocio\Cliente.cs" />
     <Compile Include="CapaPresentacion\GuiaNavegacion.aspx.cs">
       <DependentUpon>GuiaNavegacion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
