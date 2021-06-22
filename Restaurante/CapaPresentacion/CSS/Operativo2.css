@@ -1,0 +1,23 @@
+﻿body {
+    background: linear-gradient(150deg, #870000, #530404);
+    background-size: 400% 300%;
+    animation: BgGradient 5s ease infinite;
+}
+
+@keyframes BgGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+#titulo {
+    color: aliceblue;
+    font-family: 'Arial Rounded MT';
+}

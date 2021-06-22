@@ -1,10 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CapaPresentacion/Site.Master" AutoEventWireup="true" CodeBehind="Admin.aspx.cs" Inherits="Restaurante.CapaPresentacion.Admin" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-       <table border="1" style="width:100%; height="100%;">
-        <tr>
-            <td style="width: 50%">GESTION DE RESERVACIONES</td>
-           <td>MESAS</td>
-        </tr>
+    <center>
+        <img src="Imagenes/Restaurante.png" style="width: 145px; height: 139px" />
+        <h2>GESTIÓN DE RESERVACIONES</h2>
+    </center>
+       <table style="width:100%; height="100%;">
+        
         <tr>
             <td style="width: 50%">
                 <div  style="margin-left: 10px; margin-top:10px; margin-bottom:10px;">

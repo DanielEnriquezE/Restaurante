@@ -7,11 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Restaurante
+namespace Restaurante.CapaPresentacion
 {
 
 
-    public partial class Index
+    public partial class ReservacionCancelada
     {
     }
 }

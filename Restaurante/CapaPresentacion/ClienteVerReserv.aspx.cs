@@ -19,6 +19,7 @@ namespace Restaurante
 
         protected void botonConsultar_Click(object sender, EventArgs e)
         {
+            lblInforma.Text = "Se encontró la siguiente coincidencia";
             SqlConnection cn = new SqlConnection("Data Source=alanserver-1200.database.windows.net;DATABASE=Restaurante;uid=usuario;pwd=Aprendeaprogramar123;integrated security=false");
 
             cn.Open();
@@ -60,7 +61,7 @@ namespace Restaurante
             lblEdad.Text = "";
             lblHorario.Text = "";
             lblMesa.Text = "";
-            Response.Redirect("Index.aspx");
+            Response.Redirect("ReservacionCancelada.aspx");
         }
 
         protected void modificarReservacion_Click(object sender, EventArgs e)

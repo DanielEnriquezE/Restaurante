@@ -43,12 +43,10 @@ namespace Restaurante.CapaPresentacion
                     string horaObtenida = sa.GetValue(5).ToString();
                     TextBox1.Text = horaObtenida.Substring(0, 2) + ":" + horaObtenida.Substring(2, 2) + "hrs";
 
-
                 }
 
                 cn.Close();
-            }
-            
+            }            
             
         }
 
@@ -70,10 +68,7 @@ namespace Restaurante.CapaPresentacion
             sa.Fill(tablaResult);
             gvMesas.DataSource = tablaResult;
             gvMesas.DataBind();
-
-
             cn.Close();
-
         }
 
         protected void gvMesas_SelectedIndexChanged(object sender, EventArgs e)
@@ -111,7 +106,7 @@ namespace Restaurante.CapaPresentacion
             txtEdad.Text = "";
             fecha.Text = "";
 
-            Session["crearReserv"] = 4369;
+            Session["crearReserv"] = numeroReservacionRandomsalida;
 
             Response.Redirect("VentanaConfirmarReservacion.aspx");
 
@@ -120,10 +115,6 @@ namespace Restaurante.CapaPresentacion
         protected void fecha_TextChanged(object sender, EventArgs e)
         {
             DropDownHorario.Enabled = true;
-
-
-
-
         }
         public bool Existe(string fecha)
         {

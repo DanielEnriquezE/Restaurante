@@ -119,5 +119,9 @@ namespace Restaurante.CapaPresentacion
             }
         }
 
+        protected void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

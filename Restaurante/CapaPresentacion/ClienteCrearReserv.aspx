@@ -3,72 +3,129 @@
     MasterPageFile="~/CapaPresentacion/Site.Master"%>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <center>
-        <h1 id="titulo">Que la tradición Mexicana corra por tu paladar ;)</h1>
-        <h3 id="subtitulo">Solicita una reservación ahora!</h3>
-        <p id="textoGuia"> Si es la primera vez que reservas con nosotros, o tienes dudas 
-            de cómo es este proceso, consulta la Guía de navegación</p><br />
-    </center>
-    <table style="width: 100%; height: 100%">
-        <tr>
-            <td style="width: 50%">                
-                <asp:Label ID="lblNombre" runat="server" Text="Tu nombre:  " />
-                <asp:TextBox ID="txtNombre" placeholder="Nombre(s)" runat="server"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="ValidadorNombre" runat="server" 
-                    ErrorMessage="  Ingresa tu nombre" ControlToValidate="txtNombre"
-                    ForeColor="Red">
-                </asp:RequiredFieldValidator>
-                <br /><br />
+<link href="CSS/Operativo.css" rel="stylesheet" type="text/css" />
+&nbsp;<center>
+    <h1 id="titulo1">
+    <img src="Imagenes/Restaurante.png" style="width: 145px; height: 139px"/>Que la tradición Mexicana corra por tu paladar ;)</h1>
+    <h3 id="subtitulo1">Solicita una reservación ahora!</h3>
+    <p id="textoGuia"> Si es la primera vez que reservas con nosotros, o tienes dudas 
+        de cómo es este proceso, consulta la <a href="GuiaNavegacion.aspx">Guía de navegación</a></p><br />
+</center>
+<table style="width: 100%; height: 100%">
+    <tr>
+        <td style="width: 50%; height: 307px;">                   
+            <table>
+                <tr>
+                    <td style="width: 142px; height: 44px">
+                        <asp:Label ID="lblNombre" runat="server" Text="Tu nombre:  " 
+                            ForeColor="White"/><br />
+                    </td>
+                    <td style="height: 44px">
+                        <asp:TextBox ID="txtNombre" placeholder="Nombre(s)" runat="server" 
+                            CssClass="TextBoxs" OnTextChanged="txtNombre_TextChanged" 
+                            style="left: 200px; top: 232px"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="ValidadorNombre" runat="server" 
+                            ErrorMessage="  Ingresa tu nombre" ControlToValidate="txtNombre"
+                            ForeColor="Red">
+                        </asp:RequiredFieldValidator><br />
+                    </td>
+                </tr>
 
-                <asp:Label ID="lblApellidoP" runat="server" Text="Apellido Paterno:  " />
-                <asp:TextBox ID="txtApellidoP" placeholder="Tus apellidos" runat="server"></asp:TextBox>  
-                <asp:RequiredFieldValidator ID="ValidadorApellido" runat="server" 
-                    ErrorMessage="  Ingresa tu apellido paterno" ControlToValidate="txtApellidoP" ForeColor="Red">
-                </asp:RequiredFieldValidator>
-                <br /><br />
+                <tr>
+                    <td style="width: 142px; height: 41px">
+                        <asp:Label ID="lblApellidoP" runat="server" Text="Apellido Paterno:  "
+                                    ForeColor="White"/>
+                    </td>
+                    <td style="height: 41px">
+                        <asp:TextBox ID="txtApellidoP" placeholder="Tus apellidos" runat="server">
+                        </asp:TextBox>  
+                        <asp:RequiredFieldValidator ID="ValidadorApellido" runat="server" 
+                            ErrorMessage="  Ingresa tu apellido paterno" 
+                            ControlToValidate="txtApellidoP" ForeColor="Red">
+                        </asp:RequiredFieldValidator>
+                    </td>
+                </tr>
 
-                <asp:Label ID="lblApellidoM" runat="server" Text="Apellido Materno:  " />
-                <asp:TextBox ID="txtApellidoM" placeholder="Tus apellidos" runat="server"></asp:TextBox>   
-                <br /><br />      
+                <tr>
+                    <td style="width: 142px; height: 46px">
+                        <asp:Label ID="lblApellidoM" runat="server" Text="Apellido Materno:  " 
+                            ForeColor="White"/>
+                    </td>
+                    <td style="height: 46px">
+                        <asp:TextBox ID="txtApellidoM" placeholder="Tus apellidos" runat="server" Height="22px"></asp:TextBox>  
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
+                            ErrorMessage="  Ingresa tu apellido materno"
+                            ControlToValidate="txtApellidoM" ForeColor="Red">
+                        </asp:RequiredFieldValidator>
+                    </td>
+                </tr>
 
-                <asp:Label ID="lblEdad" runat="server" Text="Tu Edad:  " />
-                <asp:TextBox ID="txtEdad" type="number" placeholder="Edad" runat="server"></asp:TextBox>
-                <asp:RangeValidator ID="ValidadorEdad" runat="server" 
-                    ErrorMessage="Debes ser mayor de edad" ControlToValidate="txtEdad"
-                    MinimumValue="18" ForeColor="Red"
-                    MaximumValue="100"
-                    SetFocusOnError="True" Type="Integer">
-                </asp:RangeValidator>
-                <asp:RequiredFieldValidator ID="ValidadorEdad1" runat="server" 
-                    ErrorMessage="Introduce tu edad por favor" ForeColor="Red"
-                    ControlToValidate="txtEdad"></asp:RequiredFieldValidator>
-                    <br /><br />   
-               
-                <asp:Label ID="lblHorario" runat="server" Text="Elige un horario:  " />
-                <asp:TextBox ID="fecha" placeholder="fecha" type="date" min="2021-06-17" 
-                    runat="server" AutoPostBack="true"
-                    OnTextChanged="fecha_TextChanged"></asp:TextBox>
-                <asp:DropDownList ID="DropDownHorario" Enabled="false" runat="server">
-                    <asp:ListItem></asp:ListItem>
-                    <asp:ListItem>12:00hrs</asp:ListItem>
-                    <asp:ListItem>15:00hrs</asp:ListItem>
-                    <asp:ListItem>18:00hrs</asp:ListItem>
-                    <asp:ListItem>21:00hrs</asp:ListItem>
-                </asp:DropDownList>               
-                <asp:RequiredFieldValidator ID="ValidadorFecha" runat="server" 
-                    ErrorMessage="  Falta elegir una fecha" ControlToValidate="fecha"
-                    ForeColor="Red">
-                </asp:RequiredFieldValidator>
+                <tr>
+                    <td style="width: 142px">
+                        <asp:Label ID="lblEdad" runat="server" Text="Tu Edad:  " ForeColor="White"/>
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtEdad" type="number" placeholder="Edad" runat="server">
+                        </asp:TextBox>
+                        <asp:RangeValidator ID="ValidadorEdad" runat="server" 
+                            ErrorMessage="Debes ser mayor de edad" ControlToValidate="txtEdad"
+                            MinimumValue="18" ForeColor="Red"
+                            MaximumValue="100"
+                            SetFocusOnError="True" Type="Integer">
+                        </asp:RangeValidator>
+                        <asp:RequiredFieldValidator ID="ValidadorEdad1" runat="server" 
+                            ErrorMessage="Introduce tu edad por favor" ForeColor="Red"
+                            ControlToValidate="txtEdad">
+                        </asp:RequiredFieldValidator>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="width: 142px">
+                        <asp:Label ID="lblHorario" runat="server" Text="Elige un horario:  "
+                            ForeColor="White"/>
+                    </td>
+                    <td>
+                        <asp:TextBox ID="fecha" placeholder="fecha" type="date" min="2021-06-17" 
+                            runat="server" AutoPostBack="true"
+                            OnTextChanged="fecha_TextChanged"></asp:TextBox>
+                        <asp:DropDownList ID="DropDownHorario" Enabled="false" runat="server">
+                            <asp:ListItem></asp:ListItem>
+                            <asp:ListItem>12:00hrs</asp:ListItem>
+                            <asp:ListItem>15:00hrs</asp:ListItem>
+                            <asp:ListItem>18:00hrs</asp:ListItem>
+                            <asp:ListItem>21:00hrs</asp:ListItem>
+                        </asp:DropDownList>               
+                        <asp:RequiredFieldValidator ID="ValidadorFecha" runat="server" 
+                            ErrorMessage="  Falta elegir una fecha" ControlToValidate="fecha"
+                            ForeColor="Red">
+                        </asp:RequiredFieldValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="height: 66px">
+                        <asp:Button ID="btnBuscar" runat="server" OnClick="btnBuscar_Click" 
+                            Text="Consultar Mesas disponibles" />
+                    </td>                    
+                </tr>
+            </table>           
         </td>
-        <td style="width: 50%">
-            <p> La siguiente tabla muestra la cantidad de mesas disponibles en el horario elegido</p>
-            <asp:GridView runat="server" ID="gvMesas" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal" OnSelectedIndexChanged="gvMesas_SelectedIndexChanged" AutoGenerateColumns="False" DataKeyNames="NumMesa" DataSourceID="" Height="126px" Width="401px">
+        <td style="width: 50%; height: 307px;">
+            <p style="color: aliceblue;"> La siguiente tabla muestra la cantidad de mesas disponibles en 
+                el horario elegido</p>
+            <asp:GridView runat="server" ID="gvMesas" BackColor="White" BorderColor="#336666" 
+                BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal" 
+                OnSelectedIndexChanged="gvMesas_SelectedIndexChanged" AutoGenerateColumns="False" 
+                DataKeyNames="NumMesa" DataSourceID="" Height="126px" Width="401px">
                 <Columns>
-                    <asp:ButtonField ButtonType="Button" CommandName="Select" HeaderText="Acciones" ShowHeader="True" Text="Elegir" />
+                    <asp:ButtonField ButtonType="Button" CommandName="Select" HeaderText="Acciones" 
+                        ShowHeader="True" Text="Elegir" />
                 </Columns>
                 <Columns>
-                    <asp:BoundField DataField="NumMesa" HeaderText="Numero de Mesa" ReadOnly="True" SortExpression="Numero de Mesa" />
-                    <asp:BoundField DataField="NUmSilla" HeaderText="Numero de sillas" SortExpression="Numero de sillas" />
+                    <asp:BoundField DataField="NumMesa" HeaderText="Numero de Mesa" ReadOnly="True" 
+                        SortExpression="Numero de Mesa" />
+                    <asp:BoundField DataField="NUmSilla" HeaderText="Numero de sillas" 
+                        SortExpression="Numero de sillas" />
                 </Columns>
                 <FooterStyle BackColor="White" ForeColor="#333333" />
                 <HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" />
@@ -82,20 +139,15 @@
             </asp:GridView>
 
             <asp:Label runat="server" Text="Mesa elegida: " />
-            <asp:Label ID="lblMesaElegida" runat="server" Text="" ></asp:Label>
+            <asp:Label ID="lblMesaElegida" runat="server" Text="" ForeColor="White"></asp:Label>
             <br /><br />
         </td>
     </tr>        
     <tr>            
-        <td colspan="2">                
-            <asp:Button ID="btnBuscar" runat="server" OnClick="btnBuscar_Click" Text="Consultar Mesas disponibles" />
-            <br /><br />
-            <asp:CheckBox ID="CheckBoxConfirmar" runat="server" />
-            <asp:Label runat="server" Text="Doy fe que los datos ingresados son los correctos y
-                que puede que tenga que confirmar mi identidad en el establecimiento al 
-                ingresar.." /><br /><br />            
+        <td colspan="2">                                                       
             <center>
-                <asp:Button ID="botonReservar" runat="server" Text="Confirmar reservación" Width="199px" OnClick="botonReservar_Click"/><br />
+                <asp:Button ID="botonReservar" runat="server" Text="Confirmar reservación" Width="199px" 
+                    OnClick="botonReservar_Click"/><br />
             </center>
         </td>
     </tr>

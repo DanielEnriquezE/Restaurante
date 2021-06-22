@@ -1,0 +1,59 @@
+﻿body {
+    background: linear-gradient(150deg, #ff6a00, #2b8305, #a00000);
+    background-size: 400% 300%;
+    animation: BgGradient 5s ease infinite;
+}
+@keyframes BgGradient{
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%; }
+}
+
+#header1 {
+    background-color: darkgoldenrod;
+    font-size: xx-large;
+}
+
+
+h2 {
+    color: yellow;
+    animation-duration: 7s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+img{
+    border-radius: 20%;
+}
+#titulo{
+    color: ghostwhite;
+    font-family: 'Agency FB';
+}
+
+.navegacion {
+    padding-left: 5px;
+    font-size: x-large;
+    color: azure;
+}
+
+
+

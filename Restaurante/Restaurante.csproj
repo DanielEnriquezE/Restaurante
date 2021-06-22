@@ -108,15 +108,38 @@
     <Content Include="CapaPresentacion\ClienteCrearReserv.aspx" />
     <Content Include="CapaPresentacion\ClienteVerReserv.aspx" />
     <Content Include="CapaPresentacion\CSS\Estilos.css" />
+    <Content Include="CapaPresentacion\CSS\EstilosHtml.css" />
+    <Content Include="CapaPresentacion\CSS\Operativo.css" />
+    <Content Include="CapaPresentacion\CSS\Operativo2.css" />
     <Content Include="CapaPresentacion\GuiaNavegacion.aspx" />
+    <Content Include="CapaPresentacion\Imagenes\cocina-mexicana.jpg" />
+    <Content Include="CapaPresentacion\Imagenes\Guia\Guia1.JPG" />
+    <Content Include="CapaPresentacion\Imagenes\Guia\Guia2.JPG" />
+    <Content Include="CapaPresentacion\Imagenes\Guia\Guia3.JPG" />
+    <Content Include="CapaPresentacion\Imagenes\Guia\Guia4.JPG" />
+    <Content Include="CapaPresentacion\Imagenes\Guia\Guia5.JPG" />
+    <Content Include="CapaPresentacion\Imagenes\Guia\Guia6.JPG" />
+    <Content Include="CapaPresentacion\Imagenes\Guia\Guia7.JPG" />
+    <Content Include="CapaPresentacion\Imagenes\Guia\Guia8.JPG" />
+    <Content Include="CapaPresentacion\Imagenes\logo_200x200.png" />
+    <Content Include="CapaPresentacion\Imagenes\R202167882e623dbe519dbff9f8ec1834.jpg" />
+    <Content Include="CapaPresentacion\Imagenes\R4bba241c56a5e181b29d05d3d2b39560.jpg" />
+    <Content Include="CapaPresentacion\Imagenes\Restaurante.png" />
+    <Content Include="CapaPresentacion\Imagenes\wallpapers\cultura-800x420.jpg" />
+    <Content Include="CapaPresentacion\Imagenes\wallpapers\Lago-Ranco.jpg" />
+    <Content Include="CapaPresentacion\Imagenes\wallpapers\OIP %281%29.jpg" />
+    <Content Include="CapaPresentacion\Imagenes\wallpapers\OIP %282%29.jpg" />
+    <Content Include="CapaPresentacion\Imagenes\wallpapers\OIP.jpg" />
+    <Content Include="CapaPresentacion\Imagenes\wallpapers\ouroboros-symbol-of-ancient-golden-snake-eating-its-tail-in-animated-circular-motion_bp3ufl38__F0014.png" />
+    <Content Include="CapaPresentacion\Imagenes\wallpapers\patterns-lines-bright-color-wallpaper-preview.jpg" />
     <Content Include="CapaPresentacion\JS\js.js" />
     <Content Include="CapaPresentacion\Modificar.aspx" />
+    <Content Include="CapaPresentacion\ReservacionCancelada.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="CapaPresentacion\Index.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -129,6 +152,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="CapaPresentacion\Index.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -198,13 +222,6 @@
     <Compile Include="CapaPresentacion\GuiaNavegacion.aspx.designer.cs">
       <DependentUpon>GuiaNavegacion.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CapaPresentacion\Index.aspx.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CapaPresentacion\Index.aspx.designer.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
-    </Compile>
     <Compile Include="CapaPresentacion\Modificar.aspx.cs">
       <DependentUpon>Modificar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -212,9 +229,23 @@
     <Compile Include="CapaPresentacion\Modificar.aspx.designer.cs">
       <DependentUpon>Modificar.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CapaPresentacion\ReservacionCancelada.aspx.cs">
+      <DependentUpon>ReservacionCancelada.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\ReservacionCancelada.aspx.designer.cs">
+      <DependentUpon>ReservacionCancelada.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Conexion.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CapaPresentacion\Site.Master.cs">

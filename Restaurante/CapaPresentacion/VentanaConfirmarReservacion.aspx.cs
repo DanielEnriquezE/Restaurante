@@ -54,6 +54,8 @@ namespace Restaurante
             cmd.Parameters.AddWithValue("@numeroReservacionRandomsalida", numeroReservacionRandomsalida);
             cmd.ExecuteNonQuery();
             cn.Close();
+            Response.Write("<script>alert('Registro eliminado correctamente');</script>");
+            Response.Redirect("ReservacionCancelada.aspx");
         }
 
         protected void modificarReservacion_Click(object sender, EventArgs e)

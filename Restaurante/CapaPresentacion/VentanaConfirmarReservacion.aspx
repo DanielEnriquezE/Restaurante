@@ -32,6 +32,16 @@
                 <asp:Label ID="lblMesa" runat="server" Font-Bold="True"/>
         </td>
         <td style="width: 50%">
+            <center>
+                <h4>Ten en cuenta lo siguiente:</h4>
+            </center>
+            <ul>
+                <li>Cuando llegues al establecimiento, porporciona tu número de reservacion y una identificación oficial</li>
+                <li>Si deseas modificar datos en tu reservación, deberás hacerlos antes del día y hora de tu reservación</li>
+                <li>¿Te equivocaste en algo? Pulsa el botón correspondiente para corregir tu informción</li>
+            </ul>
+
+
              <asp:Button ID="eliminarReservacion" runat="server" Text="Eliminar Reservación" OnClick="eliminarReservacion_Click" />
             <br /><br />
             <asp:Button ID="modificarReservacion" Enabled="false" runat="server" Text="Modificar Reservación" OnClick="modificarReservacion_Click" />
